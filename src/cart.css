@@ -1,0 +1,25 @@
+.cart-icon {
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 95%;
+    left: 95%;
+    transform: translate(-95%, -95%);
+    z-index: 1;
+}
+
+.parent-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.product-img-cart img {
+    max-width: 100%;
+    max-height: auto;
+    display: flex;
+    align-items: center;
+}
