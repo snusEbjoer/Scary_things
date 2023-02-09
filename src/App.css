@@ -12,7 +12,7 @@ body{
     max-width: 100%;
     max-height: auto;
     background-color: var(--tg-theme-bg-color);
-    padding: 10px;
+    padding: 20px;
     border-radius: 7px 7px 7px 7px;
     /* VIA CSS MATIC https://goo.gl/cIbnS */
     -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
