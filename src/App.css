@@ -1,5 +1,5 @@
 body{
-	background: var(--tg-theme-bg-color);
+	background: var(--tg-theme-secondary-bg-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,6 +10,7 @@ body{
   .wrapper {
     max-width: 100%;
     max-height: auto;
+    color: var(--tg-theme-bg-color);
     padding: 20px;
     border-radius: 7px 7px 7px 7px;
     /* VIA CSS MATIC https://goo.gl/cIbnS */
