@@ -7,7 +7,7 @@ body{
 	font-size: 18px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
   .wrapper {
     max-width: 100%;
     max-height: auto;
@@ -46,15 +46,16 @@ body{
   }
   .product-price-btn {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
   }
   .product-price-btn button {
-    margin-top: 18px;
-    margin-left: 18px;
+    display: flex;
+    justify-content: center;
     background: var(--tg-theme-button-color);
 	  color: var(--tg-theme-button-text-color);
-	  border: none;
+    padding: 10px;
+	  border-radius: 7px;
 	  font-size: 18px;
   }
 }

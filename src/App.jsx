@@ -15,12 +15,12 @@ function App() {
         </div>
         <div class="product-info">
           <div class="product-text">
-            <h1>Harvest Vase</h1>
-            <p>фыдвоагывантфывгапфывшагфырва гфывашфывпа фываиочвтнывшгарв фр вга </p>
+            <h1>Jopa</h1>
+            <p>Caffè latte is a coffee beverage of Italian origin made with espresso and steamed milk.</p>
           </div>
           <div class="product-price-btn">
             <p><span>78</span>$</p>
-            <button type="button">buy now</button>
+            <button type="button">Добавить в корзину</button>
           </div>
         </div>
       </div>
