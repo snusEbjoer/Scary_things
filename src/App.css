@@ -1,5 +1,4 @@
 body{
-	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
 	display: flex;
 	flex-direction: column;
@@ -26,12 +25,15 @@ body{
     display: block;
   }
   .product-info {
+    color: var(--tg-theme-text-color);
     justify-content: center;
   }
   .product-text h1 {
+    color: var(--tg-theme-text-color);
     font-size: 24px;
   }
   .product-text p {
+    color: var(--tg-theme-text-color);
     font-size: 18px;
   }
   .product-img {
