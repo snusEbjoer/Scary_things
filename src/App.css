@@ -5,6 +5,7 @@ body{
 	align-items: center;
   padding: 20px;
 	font-size: 18px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 900px){
