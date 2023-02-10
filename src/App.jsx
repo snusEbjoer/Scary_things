@@ -46,7 +46,7 @@ function App() {
       </div>
       ))}
       </div>
-      <div onClick={() => {setIsOpenCart(!isOpenCart); {tg.sendData(cart)}}} key={cart.item_id} className='cart-icon'></div>
+      <div onClick={() => {setIsOpenCart(!isOpenCart)}} key={cart.item_id} className='cart-icon'></div>
       {isOpenCart && < Cart cart={cart} setIsOpenCart={setIsOpenCart}/>}
       {isOpen && <Modal currentItem={currentItem} items={items} setIsOpen={setIsOpen}/>}
       <Form/>

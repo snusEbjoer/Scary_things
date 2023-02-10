@@ -21,6 +21,7 @@ function Cart({cart, setIsOpenCart }) {
         </div>
       </div>
       ))}
+      <button onClick={tg.sendData(totalPrice)}></button>
       <p>{totalPrice}руб</p>
       </div>
   )
