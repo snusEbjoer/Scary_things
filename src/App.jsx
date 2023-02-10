@@ -17,6 +17,11 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
   const [currentItem, setCurrentItem] = useState(items[0])
   const [isOpenCart, setIsOpenCart] = useState(false)
+  const [totalPrice, setTotalPrice] = useState(0)
+
+  const calcTotalPrice = (obj) => {
+    setTotalPrice([totalPrice + obj])}
+
 
   useEffect(() => {
     fetch("http://127.0.0.1:5000/getAllItems")
@@ -37,14 +42,14 @@ function App() {
             <p>{obj.price}руб.</p>
           </div>
           <div className="product-price-btn">
-            <button onClick={() => addToCart(obj)} type="button">В корзину</button>
+            <button onClick={() => {addToCart(obj)}} type="button">В корзину</button>
           </div>
         </div>
       </div>
       ))}
       </div>
-      <div onClick={() => {setIsOpenCart(!isOpenCart)}} key={cart.item_id} className='cart-icon'></div>
-      {isOpenCart && < Cart cart={cart} setIsOpenCart={setIsOpenCart}/>}
+      <div onClick={() => {setIsOpenCart(!isOpenCart);}} key={cart.item_id} className='cart-icon'></div>
+      {isOpenCart && < Cart cart={cart} setIsOpenCart={setIsOpenCart} totalPrice={totalPrice} setTotalPrice={setTotalPrice} calcTotalPrice={calcTotalPrice}/>}
       {isOpen && <Modal currentItem={currentItem} items={items} setIsOpen={setIsOpen}/>}
     </React.Fragment>
   )}

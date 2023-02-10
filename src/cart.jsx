@@ -1,8 +1,9 @@
 import { useState } from "react";
 import './cart.css'
 
-function Cart({cart, setIsOpenCart}) {
-
+function Cart({cart, setIsOpenCart, totalPrice, setTotalPrice, calcTotalPrice}) {
+  console.log(cart)
+  console.log(totalPrice)
   return (
       <div className="parent-cart">
       {cart.map(obj => (
@@ -18,6 +19,8 @@ function Cart({cart, setIsOpenCart}) {
         </div>
       </div>
       ))}
+      {calcTotalPrice(cart)}
+      {totalPrice}
       </div>
   )
 }
