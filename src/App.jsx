@@ -3,6 +3,7 @@ import './App.css'
 import Cart from './cart'
 import React from 'react'
 import Modal from './modal'
+import Form from './form'
 
 let tg = window.Telegram.WebApp
 
@@ -12,17 +13,14 @@ function App() {
   const [items, setItems] = useState([])
   const [cart, setCart] = useState([])
   const addToCart = (obj) => {
-    setCart([...cart, obj])}
+    setCart([...cart, obj])
+  }
   
   const [isOpen, setIsOpen] = useState(false)
   const [currentItem, setCurrentItem] = useState(items[0])
   const [isOpenCart, setIsOpenCart] = useState(false)
-  const [totalPrice, setTotalPrice] = useState(0)
 
-  const calcTotalPrice = (obj) => {
-    setTotalPrice([totalPrice + obj])}
-
-
+    
   useEffect(() => {
     fetch("http://127.0.0.1:5000/getAllItems")
       .then((resp) => resp.json())
@@ -49,8 +47,10 @@ function App() {
       ))}
       </div>
       <div onClick={() => {setIsOpenCart(!isOpenCart);}} key={cart.item_id} className='cart-icon'></div>
-      {isOpenCart && < Cart cart={cart} setIsOpenCart={setIsOpenCart} totalPrice={totalPrice} setTotalPrice={setTotalPrice} calcTotalPrice={calcTotalPrice}/>}
+      {tg.sendData(cart)}
+      {isOpenCart && < Cart cart={cart} setIsOpenCart={setIsOpenCart}/>}
       {isOpen && <Modal currentItem={currentItem} items={items} setIsOpen={setIsOpen}/>}
+      <Form/>
     </React.Fragment>
   )}
 

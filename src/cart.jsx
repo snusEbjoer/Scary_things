@@ -1,9 +1,10 @@
 import { useState } from "react";
 import './cart.css'
 
-function Cart({cart, setIsOpenCart, totalPrice, setTotalPrice, calcTotalPrice}) {
+function Cart({cart, setIsOpenCart }) {
+  cart.map(obj => (obj.quantity = 1))
+  const totalPrice = cart.reduce((sum, obj) => obj.price + sum, 0)
   console.log(cart)
-  console.log(totalPrice)
   return (
       <div className="parent-cart">
       {cart.map(obj => (
@@ -15,12 +16,12 @@ function Cart({cart, setIsOpenCart, totalPrice, setTotalPrice, calcTotalPrice}) 
           <div className="product-text-cart">
             <h1>{obj.title}</h1>
             <p>{obj.price}руб.</p>
+            <p>{obj.quantity}</p>
           </div>
         </div>
       </div>
       ))}
-      {calcTotalPrice(cart)}
-      {totalPrice}
+      <p>{totalPrice}руб</p>
       </div>
   )
 }
