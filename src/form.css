@@ -1,42 +1,38 @@
-.wrapper-form {
+.form-container {
+    background-color: cyan;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.parent-form {
-    max-width: 80%;
-    max-height: 60%;
-    width: 70%;
-    height: 60%;
-    background-color: white;
+    justify-content: center;
+  }
+  
+  .form {
     padding: 20px;
-    border-radius: 7px 7px 7px 7px;
-    /* VIA CSS MATIC https://goo.gl/cIbnS */
-    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-
-}
-
-.form-form {
-    max-width: 90%;
-    max-height: 90%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 10px;
-
-}
-
-.form-form input {
-    max-width: 70%;
-    max-height: 15%;
-}
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-input {
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  
+  .form-submit-button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  

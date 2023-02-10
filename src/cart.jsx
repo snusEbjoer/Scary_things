@@ -2,9 +2,8 @@ import { useState } from "react";
 import './cart.css'
 
 function Cart({cart, setIsOpenCart }) {
-  cart.map(obj => (obj.quantity = 1))
-  const totalPrice = cart.reduce((sum, obj) => obj.price + sum, 0)
-  console.log(cart)
+  const totalPrice = cart.reduce((sum, obj) => obj.price * obj.quantity + sum, 0)
+  console.log(totalPrice)
   return (
       <div className="parent-cart">
       {cart.map(obj => (
@@ -21,7 +20,6 @@ function Cart({cart, setIsOpenCart }) {
         </div>
       </div>
       ))}
-      <button onClick={tg.sendData(totalPrice)}></button>
       <p>{totalPrice}руб</p>
       </div>
   )
